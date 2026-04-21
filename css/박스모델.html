@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델</title>
+  <style>
+    .exam{
+      border:1px solid #000;
+      background-color: #ccc;
+      padding:10px 20px 30px 40px;
+      width:150px;
+    }
+    /* 
+    inline -> 줄바뀌지않아요
+    block -> 너비/높이 지정 가능
+    */
+    span.exam{
+      display: inline-block;
+      width: auto;
+      padding: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <!-- .exam>lorem10 -->
+  <div class="exam">Lorem ipsum <span class="exam">dolor</span> sit amet consectetur, adipisicing elit. Sunt, officiis.</div>
+  <p class="exam">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nemo vero reiciendis sapiente, commodi asperiores ratione voluptas repellendus esse sint corporis non maiores quam alias laudantium atque voluptate aspernatur tenetur quis quidem rerum nam velit sed dolor! Culpa, dignissimos odit.</p>
+  <div class="exam">Lorem.</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 연습2</title>
+  <style>
+    /* 서체 지정
+    font-family:글꼴이름1, 글꼴이름2...,브라우저사용서체;
+    font-family:영어서체, 한글서체,...,브라우저사용서체;
+    font-family:영어서체, 한글서체,...,sans-serif;
+    font-family:영어서체, 한글서체,...,serif;
+ */
+    body{
+      font-family:  "맑은 고딕",serif;
+      /* 브라우저 설정 기본크기 font-size:1em; */
+      /* 브라우저 설정 기본크기 font-size:16px; */
+      /* font-size: 14px; */
+      /* font-size: 0.875em;  14px*/
+    }
+    .box p{
+      /* font-size:0.875em; 부모의 글자크기 14px의 0.875*/
+      /*font-size:14px; 부모의 크기랑 상관없 무조건 14px*/
+      font-size:0.875rem;
+      /* font-size:87.5%; */
+    }
+    /* reset */
+    h1, h2, h3, h4, h5, h6{
+      font-size: 1rem;  /*root (html요소)의 글자크기를 기준*/
+      font-weight: normal;
+    }
+
+
+    /* 
+    p{}
+    .title{}
+    1 section .title {}  후손 .title
+    2 section > .title {}  자식 .title
+    */
+    section > .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #8866ff;
+      font-family:  Impact, "돋움체" , sans-serif ;
+    }
+
+    /* font-style */
+    .italic{
+      font-style: italic;
+      color:royalblue;
+      font-weight: bold;
+    }
+
+    /*소문자 크기의 대문자 표기  small-caps */
+    section > .title{
+      font-variant: small-caps;
+    }
+    /* 
+    블록레벨의 요소내의 문단의 줄간격
+    요소과 요소사이의 간격은 여백으로 처리
+    */
+    #section2{
+      line-height:1.5;
+    }
+    /* font-size:14px;  */
+    body{
+      /* font :  font-style font-variant font-weight font-size/line-height font-family ;  */
+
+      /* 
+      font-size:0.875em; 
+      font-style: normal;
+      font-weight: normal;
+      font-family: "궁서체",serif;
+      line-height: 1.5; */
+      /* font: normal normal 0.875em/1.5 "궁서체",serif; */
+      /* line-height는 생략시 font-size뒤에 /이 생략*/
+      font:  0.875em "궁서체",serif;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="wrap">
+    <!-- header+div.container+footer -->
+    <header></header>
+    <div class="container">
+      <!-- section#section$*3>p.title+div.box>h2+p*2>lorem10 -->
+      <!-- section#section1 -->
+      <section id="section1">
+        <!-- p.title+div.box -->
+        <div class="title">secton1</div>
+        <div class="box">
+          <!-- h2+p*2>lorem10 -->
+          <h2 class="title">신상품</h2>
+          <p>Lorem <span class="italic">ipsum</span> dolor sit amet consectetur, adipisicing elit. Nesciunt, delectus.</p>
+          <p>Veritatis aliquam doloremque perferendis dolores nobis expedita minus! Voluptate, tempore?</p>
+        </div>
+      </section>
+      <section id="section2">
+        <!-- p.title+div.box -->
+        <p class="title">secton2</p>
+        <div class="box">
+          <!-- h2+p*2>lorem10 -->
+          <h2 class="title">엠디 추천</h2>
+          <p>Lorem ipsum dolor <span class="italic">sit amet</span> consectetur, adipisicing elit. Nesciunt, delectus.</p>
+          <p>Veritatis aliquam doloremque perferendis dolores nobis expedita minus! Voluptate, tempore?</p>
+        </div>
+        <p> section2 마지막 자식</p>
+      </section>
+      <section id="section3">
+        <!-- p.title+div.box -->
+        <p class="title">secton3</p>
+        <div class="box">
+          <!-- h2+p*2>lorem10 -->
+          <h2 class="title">베스트 상품</h2>
+          <p>Lorem <span class="italic">ipsum dolor </span>sit amet consectetur, adipisicing elit. Nesciunt, delectus.</p>
+          <p>Veritatis aliquam doloremque perferendis dolores nobis expedita minus! Voluptate, tempore?</p>
+        </div>
+      </section>
+      </div>
+     
+    <!-- //.container -->
+    <footer></footer>
+  </div>
+  <!-- //#wrap -->
+</body>
+</html>
