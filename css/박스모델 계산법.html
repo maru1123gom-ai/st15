@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델 계산법 box-sizing</title>
+  <style>
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      margin: 30px;
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+      /* display: inline-block; */
+    }
+
+    .box1 {
+      /* width:200px;
+      height: 200px; */
+      /* 안쪽여백:상하 좌우 */
+      /* 수평크기
+      ml 30 bl 0 pl20 w200 pr 20 br 0 mr30 => 300
+      개발자도구 바깥여백빼기  ml mr 30 + 30 =? 240
+      */
+      padding: 10px 20px;
+      /* width:200px;
+      height: 200px; */
+      /* 안쪽여백:10px 20px */
+      /* 수직
+   mt 30 bt 0 pt 10 h200 pb10 bb 0 mb30  =>280
+개발자도구 바깥여백빼기  ml mr 30 + 30 =? 220
+*/
+    }
+
+    .box2 {
+      padding: 10px 20px;
+      box-sizing: content-box;
+      /* width:200px;
+      height: 200px; */
+      /* 안쪽여백:상하 좌우 */
+      /* 수평크기
+      ml 30 bl 0 pl20 w200 pr 20 br 0 mr30 => 300
+      개발자도구 바깥여백빼기  ml mr 30 + 30 =? 240
+      */
+      /* 수직
+     mt 30 bt 0 pt 10 h200 pb10 bb 0 mb30  =>280
+    개발자도구 바깥여백빼기  ml mr 30 + 30 =? 220
+     */
+    }
+
+    /* 
+    box-sizing:content-box;
+    박스모델의 계산법 정의
+     content-box값 width / height -> 요소의 내용크기
+     border-box값
+     width / height -> borer+padding + 콘텐츠영역
+
+    */
+    .box3{
+       /* width:200px;
+      height: 200px; */
+      box-sizing: border-box;
+      padding:10px 20px;
+    }
+    .box4{
+      /* box-sizing: border-box; */
+      box-sizing: content-box;
+      /* 
+       width / height 
+      => border + padding + content영역
+      */
+      width:300px;
+      border:10px dashed #000;
+      /* 
+      em  : font-size 는 부모를 글자크기기준
+      박스모델 : 자신 글자크기 기준
+      */
+      padding:2em 1em;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- .box.box$*4>lorem15 -->
+  <div class="box box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sunt? Similique vel nisi
+    cumque eligendi.</div>
+  <div class="box box2">Facere, explicabo? Dolorem aliquam dolor eaque, iste voluptatem ratione maiores voluptates quod
+    eos alias optio.</div>
+  <div class="box box3">Minima, aut? Impedit vel magnam nostrum mollitia reprehenderit, animi illum cupiditate quidem
+    accusamus corrupti. Suscipit.</div>
+  <div class="box box4">Nostrum voluptates tenetur ipsam corrupti illo tempora explicabo inventore tempore cumque
+    repudiandae? Facere, maiores deleniti?</div>
+</body>
+
+</html>

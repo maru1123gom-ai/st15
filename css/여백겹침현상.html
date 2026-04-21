@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여백겹침현상</title>
+</head>
+<body>
+
+  <header>
+    <!-- 헤더 최상위컨테이너 -->
+     <!-- 여백, 테두리 -->
+    <div class="inner">
+      <!-- 정렬기준 -->
+       <div class="child child1">내용</div>
+       <div class="child child2">내용</div>
+    </div>
+  </header>
+
+  <style>
+    /* reset */
+    *{margin:0;  padding:0;}
+    body{background-color: #ccc;}
+
+    /* 
+    
+   
+    내용 부모의 가운데에 정렬이되게
+    */
+    header{
+      background-color: #fff;
+      /* 헤더 내용과 요소사이 안여백 */
+      padding:1rem 0;
+      /*  헤더 아래 테두리가 나오게 */
+      border-bottom:1px solid #000;
+      /* 최소 높이를 확보 */
+      min-height: 100px;
+    }
+
+    /* 
+    정렬은 부모에게 주세요
+    */
+    header .inner{
+      background-color: #ccc;
+      min-width:600px;
+      max-width:1400px;
+      width:90%;
+      margin:0 auto;
+      padding:50px 0;
+/* width:auto; */
+       /* 
+      박스모델의 블록레벨의 정렬은 margin:0 auto;  이용해 가운데 정렬
+      margin바깥여백을 반으로 나눠서 왼쪽 오른쪽 적용
+      */
+      /* margin:상하 좌우 */
+    }
+    header .inner .child{
+      padding:1rem;
+      /* margin:50px; */
+    }
+    header .inner .child1{background-color: #86f;}
+    header .inner .child2{background-color: #f68;}
+  </style>
+
+</body>
+</html>

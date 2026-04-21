@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>너비 높이 지정</title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+    .box{
+      background-color: #ccc;
+      margin:50px 0;
+    }
+    /* 
+    block
+    너비 부모의 content영역의 크기 사용
+    높이 자식의 내용크기만큼 
+    */
+    .box{
+      /* 너비/높이 고정하고 고정크기 지정 */
+      /* width: 300px;
+      height: 100px; */
+      /* 너비와 높이를 고정하지 최소/최대크기 지정 */
+      /* min-width: none  기본값 */
+      /* 최소크기지정 min- */
+      min-width: 400px;
+      /* 최대크기 제한 max- */
+      max-width:1000px;
+      /* width:auto; 생략시 기본 */
+      /* width부모의 상대크기 */
+      width:70%;
+
+
+      /* 높이는 자식요소의 크기 */
+      /* 높이는 포함내용의 크기만큼 높이
+         높이는 자식으로 부터와요
+      */
+      /* 자식의 크기가 작을 경우 최소확보 높이 */
+      min-height: 50px;
+      /* 자식의 크기의 상관없이 최대크기 제한크기 */
+      max-height: 100px;
+
+    }
+  </style>
+</head>
+<body>
+  <!-- .box.box$*4>{box$} -->
+  <div class="box box1">box1</div>
+  <!-- lorem40 -->
+  <div class="box box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolore vitae excepturi ut pariatur ipsa libero aut ipsum at beatae maxime error modi dolorem! Officia nemo aspernatur ipsum labore. Ducimus repellat voluptates voluptatem natus perferendis, doloribus esse veniam ea hic.</div>
+  <div class="box box3">box3</div>
+  <!-- lorem20 -->
+  <div class="box box4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus necessitatibus obcaecati, praesentium veniam quis eos laborum officiis culpa illo!</div>
+</body>
+</html>
