@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overflow</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .box{
+      background-color: #ccc;
+      width: 300px;
+      height: 150px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">연습</div>
+  <div class="overflow-exam">
+    <h1>자식의 크기가 부모의 크기보다 클때
+
+
+    </h1>
+    <div class="box box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iusto necessitatibus amet mollitia accusantium placeat.</div>
+    <div class="box box2">Magni voluptatibus ullam tenetur ab inventore alias, velit, quod quasi saepe molestias, praesentium voluptates explicabo?</div>
+    <div class="box box3">Aperiam, mollitia dolores numquam repudiandae optio facilis ducimus excepturi incidunt molestias aut soluta eum ipsa!</div>
+    <div class="box box4">Inventore tempora quasi doloremque blanditiis incidunt maxime id ab. Reprehenderit molestiae fuga et hic a?</div>
+  </div>
+  <style>
+    .overflow-exam > .box{
+      /* width: 300px; */
+      height: 100px;
+      /* height: auto; */
+      border: 1px solid #000;
+      margin: 50px 0 10px 0;
+    }
+    .box{
+      /* overflow: visible; */
+      overflow: auto;}
+    .box2{overflow: scroll;}
+    .box3{overflow: visible;}
+    .box4{overflow: hidden;}
+  </style>
+  <div class="box box5">
+  <img src="../html/asset/logo.png" alt=""></div>
+  <style>
+    .box{overflow-y: hidden;}
+  </style>
+
+</body>
+</html>
