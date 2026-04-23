@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다중배경이미지</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .box{
+      width: 100%; height: 100%;
+      background-color: #ccc;
+      background-image: 
+      url(images/sun.png),
+      url(images/field2.png),
+      url(images/flower.png),
+      ;
+      background-repeat: no-repeat, repeat-x;
+      background-position: 100% 50px, center bottom, 50% 100% ;
+      background-size: auto, 40% ,30% ;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
