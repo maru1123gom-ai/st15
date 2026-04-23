@@ -7,18 +7,41 @@
   <style>
     *{margin: 0; padding: 0;}
     .container-wrap{
-      margin: 0 50px;
+      /* margin: 0 50px; */
       background-color: #ccc;
     }
-    .container-wrap> section{
+    .container-wrap > section{
+    box-sizing: border-box;
       width: 100%;
       padding: 1em;
-      box-sizing: border-box;
       height: 100vh;
+      /* margin: 0 -50px; */
+      /* margin: 0; */
+      /* background-image: url(images/bg.jpg); */
+      background-image: url(images/sun.png);
+      /* background-image: url(images/flower.png); */
+      background-repeat:no-repeat;
+      background-color: #ac9;
+    
     }
-    .section1{background-color: rgba(255, 136, 102, 0.1);}
-    .section2{background-color: rgba(102, 136, 25, 0.2);}
-    .section3{background-color: rgba(102, 255, 136, 0.2);}
+    .container-wrap > .section1{
+      background-color: rgba(255, 136, 102, 0.1);
+    background-position: 0 0;
+    /* background-image: none; */
+
+  }
+    .container-wrap >.section2{
+      background-color: rgba(102, 136, 25, 0.2);
+      /* background-position: right bottom; */
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .container-wrap >.section3{
+      background-color: rgba(102, 255, 136, 0.2);
+      background-position: 100% 0;
+      background-attachment: scroll;
+      /* background-image: none; */
+    }
   </style>
 </head>
 <body>
