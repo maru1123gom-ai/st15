@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background-position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 200px;
+        border: 10px dotted rgba(0, 0, 0, 0.5);
+        background-color: #ff3;
+        font-size: 2em;
+        text-align: center;
+
+        background-image: url(images/frame.png);
+        /* background-repeat: no-repeat; */
+        background-repeat: repeat;
+      }
+      .box1 {
+        width: 500px;
+        background-position: 0 0;
+        background-position: left top;
+      }
+      .box2 {
+        width: 80%;
+        background-position: 100% 50%;
+        background-position: right center;
+      }
+      .box3 {
+        width: 10em;
+        background-position: center center;
+        background-position: center;
+        background-position: 50%;
+  
+
+      }
+      .box4 {
+        width: auto;
+        background-color: #fff;
+        background-image: url(images/sun.png);
+        background-position: 100px 20px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-wrap">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+    </div>
+  </body>
+</html>
