@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록 관련 Css</title>
+  <style>
+    *{margin: 0; padding:0;}
+    body{margin: 30px;}
+    li{background-color: #ccc;}
+    ol.exam , ul.exam1 
+    {
+      border: :1px solid #f00; 
+      padding-left: 3em;
+      overflow:hidden ;
+      list-style:none;
+    }
+  </style>
+</head>
+<body>
+  <ul class="exam1">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+  </ul>
+    <ol class="exam2">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+  </ol>
+
+  <div class="exam2">
+    <ol>
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+    </ol>
+  </div>
+  <style>
+    .exam2 ol, .exam2 ul{
+      list-style: none;
+    }
+    .exam2 li{
+      padding-left: 20px;
+      /* background-image: url(images/arrow-right.png);
+      background-repeat: no-repeat;
+      padding-left: 16px;
+      background-size: 12px;
+      background-position: 0  6px; */
+
+      background: url(images/arrow-right.png)
+      no-repeat 0 6px/12px;
+      
+    }
+
+
+  </style>
+ 
+
+</body>
+</html>
