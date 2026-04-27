@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position3</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="thumb">
+      <img src="images/test.png" alt="">
+      <span class="like">좋아요</span>
+      <span class="sale-box">10%</span>
+    </div>
+  </div>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin: 100px 50px;
+      background-color: #cc0;}
+    .thumb{
+      background-color: #ddd;
+    }
+    .thumb .like{
+      background-color: #86f;
+    }
+    .thumb .sale-box{
+      background-color: #f68;
+    }
+    .thumb span{width: 50px; height: 50px;}
+    .thumb span{display: block;}
+    .thumb span{
+      position: absolute;
+    }
+    .thumb{
+      position: relative;
+    }
+    .thumb span.like{
+      left: 10px; top: 10px;
+    }
+    .thumb span.sale-box{
+      right: 10px; top: 10px;
+    }
+    .thumb{width:25%;}
+    .thumb img{
+      display: block;}
+
+  </style>
+  
+</body>
+</html>

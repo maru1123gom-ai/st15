@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float layout</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ol,ul{list-style: none;}
+
+    header{background-color: #ccc; min-height: 100px;}
+    .content{
+       background-color: #ddd
+      width:90%;
+      min-width: 1000px;
+      margin:0 auto;}
+       
+    .content .box{}
+    .content .box1{
+      background-color: #68f;
+      min-height: 100px;
+      width:150px;
+      float: left;
+    }
+    .content .box2{
+      background-color: #6f8;
+      min-height: 200px;
+      /* width:75%; */
+      width: calc(75% - 100px);
+
+      
+      float: left;
+      margin-left: 50px;
+    }
+    .content .box3{
+      background-color: #f68;
+      min-height: 300px;
+      width:10%;
+      float: right;
+    }
+    .content::after{
+      content: "";
+      display: block;
+      clear: both;
+
+    }
+
+
+    
+    footer{background-color: #ccc; min-height: 200px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>헤더</header>
+    <main class="content">
+      <div class="box box1">왼쪽</div>
+      <div class="box box2">가운데</div>
+      <div class="box box3">오른쪽</div>
+    </main>
+    <footer>푸터</footer>
+  </div>
+</body>
+</html>

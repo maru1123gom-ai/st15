@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    *{margin: 0; padding: 0; block-size: border-box;}
+    .wrap{
+      width: 65%; min-height: 2000px;
+      margin: 0 auto;
+      background-color: #ccc;
+      padding: 30px;
+      border: 10px dashed #999;
+      position: relative;
+
+
+    }
+    .parent{
+      padding: 10px;
+      /* width: 50px; height: 50px; */
+    }
+    .parent:nth-child(1){
+      background-color: #f86;
+      position: static;
+      left: 150px; top: 150px;
+    }
+    .parent:nth-child(2){
+        background-color: #6f8;
+        position: relative;
+        left: 150px; top: 150px;
+    }
+    .parent:nth-child(3){
+        background-color: #86f;
+        position: absolute;
+        left: 0; top: 0;
+    }
+    .parent:nth-child(4){
+        background-color: #cf6;
+        position: fixed;
+        left: 0; top: 0;
+    }
+    .parent:nth-child(5){
+        background-color: #c8f;
+    }
+    .parent.child{
+      width: 50px; height: 50px;
+      padding: 10PX;
+      position: absolute;
+      left: 0; top: 0;
+    }
+    .parent .child:nth-child(1){
+      background-color: #FFF;
+    }
+    .parent .child:nth-child(2){
+      background-color: #0dd;
+    }
+    .box{
+      background-color: #dd0;
+    }
+    .parent:nth-child(5) .child{
+      position: static;}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .parent*5>.child*2 >.box{box$} -->
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
