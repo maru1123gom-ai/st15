@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex item</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .wrap{margin: 50px;}
+    .container{
+
+      width: auto;
+      background-color: #fcc;
+    }
+    .item{
+      border: 1px solid #000;
+      
+    }
+    
+    .flex{
+
+      display: flex;
+      /* flex-direction: row; */
+      /* flex-wrap: nowrap; */
+      /* column-gap: 1rem; */
+      /* row-gap: 0px; */
+      /* justify-content: flex-start; */
+      /* align-content: stretch; */
+      /* align-content: stretch; */
+
+    }
+    .flex .item{
+      /* flex-grow: 1; */
+      flex-shrink: 0;
+      /* flex-basis: auto; */
+      width: auto;
+      height: auto;
+
+    }
+    .flex .item:nth-child(1){flex-grow: 2;}
+    .flex .item:nth-child(2){flex-grow: 8;}
+    .flex .item:nth-child(3){flex-grow: 1;}
+    .flex .item:nth-child(4){flex-grow: 1;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container flex">
+      <div class="item">lorem</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+
+    </div>
+  
+  </div>
+</body>
+</html>
