@@ -3,16 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>position4</title>
+  <title>position4 1줄 4단 상품, 상품카드 좋아요, 세일 이미지와 겹쳐서</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ol,ul{list-style: none;}
+    .wrap{background-color: beige;
+    margin: 30px;
+    /* .ec-base-product{} */
+    .ec-base-product{
+    }
+    .ec-base-product .prdList{
+      background-color: #333;
+      border: 1px solid red;
+    }
+    .ec-base-product .prdList::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .prdList li{
+      
+
+      float: left;
+      width: 25%;
+      box-sizing: border-box;
+      background-color:blue;
+      border: 1px solid #000;
+
+    }
+    .prdList li .prdList__item{
+      position: relative;
+    }
+    .prdList li .prdList__item .thumbnail{}
+    .prdList__item .thumbnail img{
+      opacity: 0.5;
+      width: 100%;
+      display: block;
+    }
+    .prdList__item .thumbnail .sale_box{
+      position: absolute;
+      right: 5px; top: 5px;
+
+    }
+    .prdList__item .thumbnail .likeButton{
+      position: absolute;
+      left: 5px; top: 5px;
+
+
+    }
+  }
+
+  </style>
 </head>
 <body>
+
+
   <div class="wrap">
     <div class="ec-base-product">
       <ul class="prdList">
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>
@@ -21,7 +74,7 @@
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>
@@ -30,7 +83,7 @@
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>
@@ -39,7 +92,7 @@
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>
@@ -48,7 +101,7 @@
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>
@@ -57,7 +110,7 @@
         <li>
           <div class="prdList__item">
             <div class="thumbnail">
-              <img src="images/test.png" alt="">
+              <img src="../images/test.png" alt="">
               <div class="sale_box">10%</div>
               <div class="likeButton">like</div>
             </div>

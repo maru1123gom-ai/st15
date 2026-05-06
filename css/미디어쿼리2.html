@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ol.ul{list-style: none;}
+    a:link, 
+    a:visited, 
+    a:active{
+      color: currentColor;
+      text-decoration: underline;
+    }
+
+    a:hover{
+      color: red;
+      text-decoration: underline;
+    }
+    
+
+
+    .wrap{}
+
+    header{
+      background-color: #ccc;
+    }
+    header .inner{
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: #6cc;
+    }
+    header .inner:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    header .logo,
+    header .gnb-wrap{
+        float:left;
+    }
+    header .util,
+    header .m-nav-btn{
+      float:right;
+    }
+    header .gnb-wrap{
+      background-color: #cfc;
+      margin-left:50px;
+      display: block;
+     }
+     header .gnb-wrap ul.gnb{}
+     /* 블록레벨인 li를 한줄 */
+     header .gnb-wrap .gnb li{
+      display: inline-block;
+      padding:0.5em 1em;
+      background-color: #fff;
+      margin-right: 1em;
+     }
+
+    header .util{ }
+    header .util a{ 
+       display: inline-block;
+        padding:0.5em 1em;
+        background-color: #fff;
+        margin-left:1em;}
+
+    header .m-nav-btn{
+    /* display: none; */
+    }
+    @media (min-width:1024px){
+
+    .mobile-only-block{display: none;}
+    }
+    
+    @media (max-width:1023.99px){
+      .pc-only{
+        display: none !important;
+      }
+      .mobile-only-block{
+        display: block;
+      }
+
+    }
+
+   
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="inner">
+        <h1 class="logo">choi</h1>
+        <nav class="gnb-wrap pc-only">
+          <ul class="gnb">
+          <li><a href="">menu1</a></li>
+          <li><a href="">menu2</a></li>
+          <li><a href="">menu3</a></li>
+          <li><a href="">menu4</a></li>
+          <li><a href="">menu5</a></li>
+          </ul>
+        </nav>
+        <div class="util">
+          <a href="">상단기능메뉴1</a>
+          <a href="">상단기능메뉴2</a>
+          <a href="">상단기능메뉴3</a>
+        </div>
+        <!-- div.m-nav-btn.mobile-only -->
+        <div class="m-nav-btn mobile-only">
+          <img src="images/menu.png" alt="모바일사이드메뉴펼치기">
+
+        </div>
+      </div>
+    </header>
+  </div>
+  
+</body>
+</html>
