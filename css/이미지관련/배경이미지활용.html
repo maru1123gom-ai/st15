@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경이미지활용</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      *{margin: 0; padding: 0;}
+    .wrap{}
+    .visual-section{
+      width: 100%;
+      height: 100vh;
+      background-color: #97948d;
+      background-image: url(../images/background-test.jpg);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: auto 200vh;
+      text-align: center;
+      align-content: center;
+    }
+    .visual-section::after{
+      content: "wdddf";
+      display: block;
+      background-color: cyan;
+      width: 100%;
+    }
+
+
+    .visual-section .text-wrap{
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-family: "noto sans kr",
+      sans-serif;
+    }
+    .visual-section .text-wrap .title{
+      font-family: "noto sans kr",
+      sans-serif;
+      font-size: 8em;
+      font-weight: 100px;
+      color: aqua;
+      position: absolute;
+      left: 0; top: 0;
+      
+    }
+    .visual-section .text-wrap .desc{
+      display: block;
+      font-family: "noto sans kr";
+      sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+    }
+
+    </style>
+  
+</head>
+<body>
+  <div class="wrap">
+    <div class="visual-section">
+
+      <div class="test-wrap">
+        <p class="title">Lorem, ipsum dolor.</p>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt temporibus aliquam, et necessitatibus error neque? Iusto ipsam maxime similique perspiciatis?</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

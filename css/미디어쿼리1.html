@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어쿼리1 media query</title>
+  <style>
+    body{
+      background-color: #ccc;
+      font-size:16px;
+    }
+    body::before{
+      content: "데스크탑 미디어쿼리";
+    }
+
+    @media (max-width:1400px){
+      body{background-color: #fcc;}
+
+        body::before{
+          content: ;
+    }
+
+        @media (max-width:1200px){
+      body{background-color: #fcc;}
+
+        body::before{
+          content: 최대크기 1200px인 모니터
+          ;}
+  </style>
+</head>
+<body>
+  
+</body>
+</html>
