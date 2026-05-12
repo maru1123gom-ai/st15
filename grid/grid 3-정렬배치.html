@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 3-정렬배치</title>
+   <link rel="stylesheet" href="../reset.css">
+  <style>
+    .wrap{
+      margin: 50px;
+    }
+    .grid-container{
+      background-color: #ccc;
+      min-height: 500px;
+    }
+    .grid-container .item{
+      background-color: dodgerblue;
+      box-sizing: border-box;
+      border: 1px solid magenta;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 30%);
+      justify-content: start;
+      justify-content: space-between;
+
+    }
+    .grid-container .item:nth-child(1){
+      
+    }
+    .grid-container .item:nth-child(2){
+    
+    }
+    .grid-container .item:nth-child(3){
+     
+     
+    }
+    .grid-container .item:nth-child(4){
+     
+     
+    }
+    .grid-container .item:nth-child(5){
+     
+    }
+    .grid-container .item:nth-child(6){
+     
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="grid-container">
+      <div class="item">아이템1</div>
+      <div class="item">아이템2</div>
+      <div class="item">아이템3</div>
+      <div class="item">아이템4</div>
+      <div class="item">아이템5</div>
+      <div class="item">아이템6</div>
+      <div class="item">아이템7</div>
+      <div class="item">아이템8</div>
+    </div>
+  </div>
+</body>
+</html>

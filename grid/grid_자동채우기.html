@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid_자동채우기</title>
+   <link rel="stylesheet" href="../reset.css">
+  <style>
+    .wrap{
+      margin: 50px;
+    }
+    .grid-container{
+      display: grid;
+      background-color: #ccc;
+      grid-template-columns: repeat(auto-fill,100px);
+      grid-template-columns: repeat(auto-fit,100px);
+      grid-template-columns: repeat(auto-fill,minmax(100px,auto));
+      grid-template-columns: repeat(auto-fit,minmax(320px,auto));
+      gap: 20px 20px;
+    }
+    .grid-container .item{
+      background-color: dodgerblue;
+      aspect-ratio: 1;
+    }
+    .grid-container{
+      display: grid;
+
+    }
+    .grid-container .item:nth-child(1){
+      
+    }
+    .grid-container .item:nth-child(2){
+    
+    }
+    .grid-container .item:nth-child(3){
+     
+     
+    }
+    .grid-container .item:nth-child(4){
+     
+     
+    }
+    .grid-container .item:nth-child(5){
+     
+    }
+    .grid-container .item:nth-child(6){
+     
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>@media없이 반응형으로 작성 -auto-fit</h1>
+    <div class="grid-container">
+      <div class="item">아이템1</div>
+      <div class="item">아이템2</div>
+      <div class="item">아이템3</div>
+      <div class="item">아이템4</div>
+      <div class="item">아이템5</div>
+      <div class="item">아이템6</div>
+      <div class="item">아이템7</div>
+      <div class="item">아이템8</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swipe연습1</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<style>
+  /* visual-section은 브라우저의 너비를 다 사용할거예요 */
+  /* cafe24가 사용하는 클래스명 동일하게 사용
+  메인화면에서 브라우저 전체 너비를 사용할 때section 요소에 .section_full 추가
+  */
+.section_full{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.visual-section{
+  background-color: #f00;/*삭제*/
+}
+.visual-section  .swiper-slide{}
+.visual-section  .swiper-slide a{
+  display: block;
+}
+.visual-section  .swiper-slide a img{
+  display: block;
+  width:100%;
+}
+
+/* swiperjs 수정 */
+.visual-section  .swiper {
+  width: 100%;
+}
+.visual-section .swiper .swiper-pagination-bullet{
+    /* background:#fff; */
+    background:transparent;
+    /* 원 */
+    height: 12px; width:12px; 
+    border-radius: 50%;
+    /* 사각형 */
+     height: 4px; width:8px; 
+     border-radius: 0;
+     background:#fff;
+    opacity: 0.4;
+    margin-right: 1rem;
+    border:2px solid #fff
+}
+.visual-section .swiper  .swiper-pagination-bullet-active{
+  /* background-color: #8f8; */
+  background-color: #fff;
+  opacity: 1;
+  /* 사각형 */
+   width:30px; 
+}
+
+</style>
+</head>
+<body>
+  <div class="visual-section section_full section">
+  <!-- Slider main container -->
+  <div class="swiper swiper1">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+         <a href="">
+          <img src="images/slide1.png" alt="배너의 설명을 작성해주세요">
+         </a>
+      </div>
+      <div class="swiper-slide">
+          <a href="">
+          <img src="images/slide2.png" alt="배너의 설명을 작성해주세요">
+         </a>
+      </div>
+      <div class="swiper-slide">
+           <a href="">
+          <img src="images/slide3.png" alt="배너의 설명을 작성해주세요">
+         </a>
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</div>
+
+<!-- swiperjs 를 실행 -->
+ <!--   const swiper1 = new Swiper('.swiper1', { 
+  const swiper1 의 swpier1은 해당페이지내에서 유일한 이름이어야합니다.
+ Swiper('.swiper1'는 문서내 요소 존재 클래스명은 대소문자 구분
+ -->
+<script> 
+  const swiper1 = new Swiper('.swiper1', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable :true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+ </script>
+</body>
+</html>
