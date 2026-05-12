@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex4 아이템의 확장</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .inner{display: flex;}
+    #top_nav_box{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      /* justify-content: start; */
+    }
+    #top_nav_box>div{
+
+    }
+    /* #top_nav_box .top_logo{width: ;}
+    #top_nav_box .top_category{}
+    #top_nav_box .top_mypage{} */
+    
+    #top_nav_box .top_logo{width: 100px;}
+    #top_nav_box .top_category{flex-grow: 1;}
+    #top_nav_box .top_mypage{width: 150px;}
+
+
+        .inner{background-color: #ccc;}
+    #top_nav_box{background-color: rgb(143, 143, 143);}
+    #top_nav_box>div{box-sizing: border-box;
+    padding: 0.5rem;}
+    #top_nav_box .top_logo{background-color: aquamarine;}
+    #top_nav_box .top_category{background-color:moccasin;}
+    #top_nav_box .top_mypage{background-color:palevioletred;}
+
+    .inner{}
+    #top_nav_box{}
+    #top_nav_box .top_logo{}
+    #top_nav_box .top_category{}
+    #top_nav_box .top_mypage{}
+
+  </style>
+</head>
+<body>
+<div class="inner">
+  <div class="top_nav_box" id="top_nav_box">
+    <div class="top_logo">로고</div>
+    <div class="top_category">카테고리</div>
+    <div class="top_mypage">마이페이지</div>
+
+  </div>
+</div>
+  </div>
+</body>
+</html>

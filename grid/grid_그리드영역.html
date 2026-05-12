@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid_그리드영역</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+.wrap{
+  display: grid;
+  grid-template-rows: 150px minmax( auto 500px ) 300px;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: 
+  "hd hd"
+  "LNB mc"
+  ". footer"
+  ;
+}
+header{
+  background-color: #ccc;
+  grid-area: hd;
+
+}
+aside{
+  background-color: #fcc;
+  grid-area: LNB;
+}
+.main-content{
+  background-color: #ccf;
+  grid-area: mc;
+}
+footer{
+  background-color: aquamarine;
+  grid-area: footer;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>헤더</header>
+    <aside>LNB</aside>
+    <main class="main-content">페이지내용</main>
+      <footer>푸터</footer>
+    </div>
+  </div>
+  
+</body>
+</html>
