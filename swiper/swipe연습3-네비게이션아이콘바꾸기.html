@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>swipe 페이지네이션-플렉션</title>
+  <title>swipe연습3-네비게이션아이콘바꾸기</title>
   <link rel="stylesheet" href="../reset.css">
   <link
   rel="stylesheet"
@@ -28,37 +28,41 @@
     <div class="swiper-slide">Slide 1</div>
     <div class="swiper-slide">Slide 2</div>
     <div class="swiper-slide">Slide 3</div>
+    ...
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev">
+    <img src="images/arrow_back_ios_48dp.png" alt="">
+  </div>
+  <div class="swiper-button-next">
+    <img src="images/arrow_forward_48dp.png" alt="">
+  
+  </div>
 
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
 <script>
-  const swiper1 = new Swiper('.swiper', {
+  const swiper1 = new Swiper('.swiper1', {
   // Optional parameters
   // direction: 'vertical',
   direction: 'horizontal',
   loop: true,
 
   // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
   pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
+    el: '.swiper-pagination',
+  },
 
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+    addIcons:false
+
   },
 
   // And if we need scrollbar
