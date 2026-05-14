@@ -148,6 +148,37 @@
         transform: rotate(180deg);
       }
 
+      .visual-section .swiper-button-play-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        font-size: 0;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .visual-section .swiper-button-play-toggle::before {
+        content: '⏸';
+        font-size: 18px;
+      }
+      .visual-section .swiper-button-play-toggle.is-paused::before {
+        content: '▶';
+      }
+      .visual-section .swiper-button-play-toggle.is-playing {
+        background-color: #000;
+        color: #fff;
+      }
+      .visual-section .swiper-button-play-toggle.is-paused {
+        background-color: #fff;
+        color: #000;
+      }
+
       .visual-section .swiper-button .swiper-button-prev{}
       .visual-section .swiper-button .swiper-button-next{}
       
@@ -209,7 +240,7 @@
             <img src="images/arrow_back_ios_48dp.png" alt="다음슬라이드로 이동">
           </div>
           <!-- play와pause 버튼이 올거예요 -->
-           <div>버</div>
+          <div class="swiper-button-play-toggle is-playing" role="button" aria-label="슬라이드 자동 재생/정지 토글"></div>
         </div>  <!-- //.control-button -->
 
         <!-- If we need scrollbar -->
@@ -256,12 +287,37 @@
     addIcons:false,
   },
 
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
   // And if we need scrollbar
   // progressbar일때 삭제
   // scrollbar: {
   //   el: '.swiper-scrollbar',
   // },
 });
+
+const playToggleButton = document.querySelector('.swiper-button-play-toggle');
+if (playToggleButton) {
+  const toggleAutoplay = () => {
+    const isPlaying = playToggleButton.classList.contains('is-playing');
+    if (isPlaying) {
+      swiper1.autoplay.stop();
+      playToggleButton.classList.remove('is-playing');
+      playToggleButton.classList.add('is-paused');
+      playToggleButton.setAttribute('aria-label', '슬라이드 자동 재생');
+    } else {
+      swiper1.autoplay.start();
+      playToggleButton.classList.remove('is-paused');
+      playToggleButton.classList.add('is-playing');
+      playToggleButton.setAttribute('aria-label', '슬라이드 자동 정지');
+    }
+  };
+
+  playToggleButton.addEventListener('click', toggleAutoplay);
+}
 </script>
   </body>
 </html>
