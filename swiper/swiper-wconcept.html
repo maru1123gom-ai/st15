@@ -253,71 +253,7 @@
     </div>
     <!-- //.visual-section -->
     <!-- swiper 실행 -->
-    <script>
-  const swiper1 = new Swiper('.swiper1', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // 현재슬라이드 swiper안에 가운데
-  // swipeer 시작할 때 1번 슬라이드 왼쪽에 마지막 슬라이드 표시
-  centeredSlides: true,
-
-  // swiper 안에 몇개 slide를 보여줄지 결정
-  // 3을 위해서 추가
-  slidesPerView: 3,
-
-  // 5여백
-  // swiper에서는 아이템간 여백을 marin-right로 지정
-  spaceBetween: 20,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    // 7 블릿대신 progressbar
-    type : 'progressbar',
-    clickable :true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-    // 내가 입력 html img 태그 이미지 사용
-    addIcons:false,
-  },
-
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-
-  // And if we need scrollbar
-  // progressbar일때 삭제
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-});
-
-const playToggleButton = document.querySelector('.swiper-button-play-toggle');
-if (playToggleButton) {
-  const toggleAutoplay = () => {
-    const isPlaying = playToggleButton.classList.contains('is-playing');
-    if (isPlaying) {
-      swiper1.autoplay.stop();
-      playToggleButton.classList.remove('is-playing');
-      playToggleButton.classList.add('is-paused');
-      playToggleButton.setAttribute('aria-label', '슬라이드 자동 재생');
-    } else {
-      swiper1.autoplay.start();
-      playToggleButton.classList.remove('is-paused');
-      playToggleButton.classList.add('is-playing');
-      playToggleButton.setAttribute('aria-label', '슬라이드 자동 정지');
-    }
-  };
-
-  playToggleButton.addEventListener('click', toggleAutoplay);
-}
-</script>
+    <!-- myscript.js 외부 파일 참고: Cafe24 Smart Design 환경에서도 DOM 준비 후 실행되도록 설계함 -->
+    <script src="/myfolder/js/myscript.js"></script>
   </body>
 </html>
