@@ -1,0 +1,31 @@
+/* 공통 */
+.flex{display: flex;}
+.grid{display: grid;}
+.block{display: block;}
+
+
+/* 단배너 CSS */
+/* 단배너 공통 */
+.dan1>.item { width:100px;}
+.dan2>.item{ width:50%}
+.dan3>.item{ width:33.33%}
+.dan4>.item{ width:25%}
+.dan-section{}
+
+.dan-section .dan-container {
+  gap:20px;
+  
+  background-color: #f00;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+.dan-section .item {
+  flex:none;
+
+  opacity: 0.5;
+  box-sizing: border-box;
+  border: 1px solid #00f;
+}
+.dan-section .item .thumb {}
+.dan-section .item .thumb img{}
+.dan-section .item .desc {}
