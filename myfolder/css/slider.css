@@ -1,19 +1,4 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>swiper-wconcept</title>
-    <link rel="stylesheet" href="../reset.css" />
-    <!-- swiperjs css -->
-    <link
-      rel="stylesheet"
-      href="css/swiper.min.css"
-    />
-    <!-- swiperjs 스크립설치 -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <style>
-      /* 
+/* 
     1. .swiper-slide 수평으로 나란하게
     문제
       1슬라이드 나머지 보이지
@@ -124,7 +109,7 @@
         display: inline-block;
         width:24px; height: 24px;
         position: relative;
-        left:auto; right: auto; top:auto; bottom:auto;
+        left:auto; right: auto;  bottom:auto;
       }
       .visual-section .swiper-button .swiper-button-prev,
       .visual-section .swiper-button .swiper-button-next{
@@ -163,10 +148,10 @@
         overflow: hidden;
       }
       .visual-section .swiper-button .swiper-button-play-toggle .icon-pause{
-        background-image: url(images/pause_48dp.png);
+        background-image: url(/myfolder/images/pause_48dp.png);
       }
       .visual-section .swiper-button .swiper-button-play-toggle .icon-play{
-        background-image: url(images/play_arrow_48dp.png);
+        background-image: url(/myfolder/images/play_arrow_48dp.png);
       }
       /* 
       .swiper-button-play-toggle.is-play : pause 표시
@@ -176,86 +161,3 @@
        .visual-section .swiper-button .swiper-button-play-toggle.is-play  .icon-play{
         display:none;
        }
-    </style>
-  </head>
-  <body>
-    <!-- Slider main container -->
-    <div class="section visual-section">
-      <div class="swiper swiper1">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=1" />
-              <span>1번 슬라이드</span>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=2" />
-              <span>2번 슬라이드</span>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=3" />
-              <span>3번 슬라이드</span>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=4" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=5" />
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="">
-              <img src="https://picsum.photos/400/500?random=6" />
-            </a>
-          </div>
-        </div>
-        <!-- //swiper-wrapper -->
-
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 9 문제1 컨트롤버트의 위치를 편리하게 잡기위해서 -->
-        <div class="swiper-button">
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev">
-            <img src="images/arrow_back_ios_48dp.png" alt="이전슬라이드로 이동">
-          </div>
-          <div class="swiper-button-next">
-            <img src="images/arrow_back_ios_48dp.png" alt="다음슬라이드로 이동">
-          </div>
-          <!-- play와pause 버튼이 올거예요 -->
-           <!-- <div class="swiper-button-play-toggle is-play">
-            <span id="icon-pause" class="icon-pause">pause</span>
-            <span id="icon-play" class="icon-play">play_arrow</span>
-           </div> -->
-           <div class="swiper-button-play-toggle is-play">
-            <span id="icon-pause" class="icon-pause">pause</span>
-            <span id="icon-play" class="icon-play">play</span>
-           </div>
-
-
-        </div>  <!-- //.control-button -->
-
-        <!-- If we need scrollbar -->
-         <!-- pagination type:progressbar 지정했기때문에 스크롤삭제 -->
-        <!-- <div class="swiper-scrollbar"></div> -->
-      </div>
-      <!-- //.swiper -->
-    </div>
-    <!-- //.visual-section -->
-    <!-- Swiper 슬라이더 스크립트 외부 로드 -->
-    <!-- Cafe24 환경: @js(url)구문으로 변경 가능  --> 
-    <!-- 외부 JS 파일 참조: 재생/정지 토글 버튼 + Swiper 초기화 -->
-    <script src="js/myscript.js" defer></script>
-  </body>
-</html>
