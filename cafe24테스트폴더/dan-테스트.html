@@ -78,34 +78,56 @@
 		<!-- 여기서 작없을 시작 -->
 		 <!-- 0515추가 -->
 		 <link rel="stylesheet" href="/myfolder/css/ub-variables.css">
-		 <link rel="stylesheet" href="myfolder/css/ub-grid-system.css">
+		 <link rel="stylesheet" href="/myfolder/css/ub-grid-system.css">
 		 
 		<link rel="stylesheet" href="/myfolder/css/mystyle.css">
+
+		<!--@css(/myfolder/css/ub-variables.css)-->
+		<!--@css(/myfolder/css/ub-grid-system.css)-->
+		<!--@css(/myfolder/css/mystyle.css)-->
+	
+		<!-- 단3단 템플릿 시작 -->
+		 <!-- 1.커스텀html섹션 추가 후 section태그에 단섹션클래스추가햐  -->
 		<section class="section dan-section">
-			<div class="flex dan-container dan3">
+
+			<div class="flex gap-5">
 				<!-- div.item.card*4>.thumb+.desc -->
-				<div class="item card">
-					<div class="thumb"><img src="/myfolder/images/imgi_15_main_banner01_pc.jpg" alt=""></div>
+				<div class="item card col-4 col-lg-7 col-md-10">
+					<div class="thumb">
+						<!-- 스마트배너 좌 입력하세요 -->
+						 <!--@import(/smart-banner/shop1/smart-banner-admin-PC00003.html)-->
+						 <!-- <img src="/myfolder/image/imgi_17_main_banner01_pc.jpg" alt=""> -->
+
+					</div>
 					<div class="desc">Lorem, ipsum.</div>
 				</div>
-				<div class="item card">
-					<div class="thumb"><img src="/myfolder/images/imgi_16_main_banner02_pc.jpg" alt=""></div>
+				<div class="item card col-4 col-lg-7 col-md-10">
+					<div class="thumb">
+						<!-- 스마트배너 중 입력하세요 -->
+						 <!--@import(/smart-banner/shop1/smart-banner-admin-PC00004.html)-->
+						<!-- <img src="/myfolder/image/imgi_18_main_banner02_pc.jpg" alt=""> -->
+					</div>
 					<div class="desc">Lorem, ipsum dolor.</div>
 				</div>
-				<div class="item card">
-					<div class="thumb"><img src="/myfolder/images/imgi_17_main_banner03_pc.jpg" alt=""></div>
+				<div class="item card col-4 col-lg-7 col-md-10">
+					<div class="thumb">
+						<!-- 스마트배너 우 입력하세요 -->
+						 <!--@import(/smart-banner/shop1/smart-banner-admin-PC00005.html)-->
+						<!-- <img src="/myfolder/image/imgi_19_main_banner03_pc.jpg" alt=""> -->
+					</div>
 					<div class="desc">Lorem.</div>
 				</div>
-				<div class="item card">
-					<div class="thumb"><img src="/myfolder/images/imgi_15_main_banner01_pc.jpg" alt=""></div>
-					<div class="desc">Lorem, ipsum dolor.</div>
-				</div>
+
 				
 			</div>
+			<!-- //.flex마감 -->
 
 
 		</section>
-			
+			<!-- 단3단 템플릿 끝 -->
+
+
+
 		<!-- 여기서 작업 완료 -->
 	</div>
 </div>
